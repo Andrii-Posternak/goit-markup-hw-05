@@ -31,9 +31,13 @@
             ><span class="logo-accent">Web</span>Studio</a
           >
           <ul class="list list-nav">
-            <li><a class="link page-link current" href="./index.html">Студія</a></li>
-            <li><a class="link page-link" href="./portfolio.html">Портфоліо</a></li>
-            <li><a class="link page-link" href="">Контакти</a></li>
+            <li class="list-nav-item">
+              <a class="link page-link current" href="./index.html">Студія</a>
+            </li>
+            <li class="list-nav-item">
+              <a class="link page-link" href="./portfolio.html">Портфоліо</a>
+            </li>
+            <li class="list-nav-item"><a class="link page-link" href="">Контакти</a></li>
           </ul>
         </nav>
         <!-- контакти -->
@@ -63,7 +67,7 @@
       <section class="section section-hero">
         <div class="container container-hero">
           <h1 class="main-title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="btn main-btn" type="button">Замовити послугу</button>
+          <button class="btn main-btn" type="button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
       <!-- наші переваги -->
@@ -127,21 +131,30 @@
           <h2 class="title">Чим ми займаємося</h2>
           <ul class="list work-list">
             <li>
-              <img
-                src="./images/section-work/img1.jpg"
-                alt="людина пише код на комп'ютері"
-                width="370"
-              />
+              <div class="box-label">
+                <img
+                  src="./images/section-work/img1.jpg"
+                  alt="людина пише код на комп'ютері"
+                  width="370"
+                />
+                <p class="label">Десктопні додатки</p>
+              </div>
             </li>
             <li>
-              <img src="./images/section-work/img2.jpg" alt="телефон та ноутбук" width="370" />
+              <div class="box-label">
+                <img src="./images/section-work/img2.jpg" alt="телефон та ноутбук" width="370" />
+                <p class="label">Мобільні додатки</p>
+              </div>
             </li>
             <li>
-              <img
-                src="./images/section-work/img3.jpg"
-                alt="палітра кольорів в планшеті"
-                width="370"
-              />
+              <div class="box-label">
+                <img
+                  src="./images/section-work/img3.jpg"
+                  alt="палітра кольорів в планшеті"
+                  width="370"
+                />
+                <p class="label">Дизайнерські рішення</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -420,5 +433,18 @@
         </div>
       </div>
     </footer>
+
+    <!-- модалка -->
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-close-button" type="button" data-modal-close>
+          <svg class="icon-close" width="18px" height="18px">
+            <use href="./images/sprite/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
